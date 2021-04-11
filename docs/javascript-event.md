@@ -1,6 +1,7 @@
 
 # Events in JavaScript
-What is an event
+
+# What is an event ?
 An event is a signal from the browser that something has happened. For example, 
 1. When a user clicks on an HTML element, click event occurs
 2. When a user moves the mouse over an HTML element, mouseover event occurs
