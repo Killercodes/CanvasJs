@@ -7,78 +7,80 @@ If you are dummy you are welcome
 Yes, JavaScript is case sensitive programming language. Variable names, keywords, methods, object properties and event handlers all are case sensitive.
 
 Example 1 : `alert()` function name should be all small letters
-``` javascript
+```js
     alert("JavaScripts Basics Tutorial");
 ```
 
 Example 2 : Alert() is not same as alert(). Throws Alert is not defined error. To see the error press F12 key.
-``` javascript
+```js
     Alert("JavaScripts Basics Tutorial");
-[/script]
+```
 
 Comments in JavaScript : There are 2 types of comments in JavaScript.
 -	Single Line Comment
 Example : 
-``` javascript
+``` js
     // This is a sinle line comment
 ```
 
-2) Multi Line Comment
+## 2) Multi Line Comment
 Example:
-``` javascript
+``` js
     /* This is a 
        multi line 
        comment */
-[/script]
+```
 
-Data types in JavaScript
+## Data types in JavaScript
 
 The following are the different data types in JavaScript
-Numbers - 5, 5.234
-Boolean - true / false
-String - "MyString", 'MyString'
+- **Numbers** - 5, 5.234
+- **Boolean** - true / false
+- **String** - "MyString", 'MyString'
 
 To create a variable in JavaScript use var keyword. Variable names are case sensitive.
 
 With JavaScript we always use var keyword to create any type of variable. Based on the value assigned the type of the variable is inferred.
+```js
 var a = 10;
 var b = "MyString";
+```
 
 JavaScript is a dynamically typed language. This means JavaScript data types are converted automatically as needed during script execution. Notice that, in myVariable we are first storing a number and then a string later.
-``` javascript
+``` js
     var myVariable = 100;
     alert(myVariable);
     myVariable = "Assigning a string value";
     alert(myVariable);
-[/script]
+```
 
 When a + operator is used with 2 numbers, JavaScripts adds those numbers.
-``` javascript
+``` js
     var a = 10;
     var b = 20;
     var c = a + b;
     alert(c);
-[/script]
+```
 
 Output : 30
 
 When a + operator is used with 2 strings, JavaScript concatenates those 2 strings
-``` javascript
+``` js
     var a = "Hello "
     var b = "JavaScript";
     var c = a + b;
     alert(c);
-[/script]
+```
 
 Output : Hello JavaScript
 
 When a + operator is used with a string and a number, JavaScript converts the numeric value to a string and performs concatenation.
-``` javascript
+``` js
     var a = "Number is : "
     var b = 10;
     var c = a + b;
     alert(c);
-[/script]
+```
 
 Output : Number is 10
 
@@ -87,7 +89,7 @@ Output : Number is 10
     var b = 10;
     var c = a + b;
     alert(c);
-[/script]
+```
 
 Output : 5010
 
@@ -97,7 +99,7 @@ But if you use a minus operator, numeric value is not converted to string
     var b = 10;
     var c = a - b;
     alert(c);
-[/script]
+```
 
 Output : 40
 
@@ -158,7 +160,7 @@ function IsEven()
 ```
 
 4. On your webform in the head section include a reference to the external JavaScript file using script element as shown below
-```
+```html
 <script type="text/javascript" src="ExternalJavaScript.js"></script>
 ```
 
@@ -194,25 +196,29 @@ The following JavaScript code creates an empty array. length property returns 0 
 var emptyArray = [];
 alert(emptyArray.length);
 ```
+```
 Output : 0
-
+```
 Another way to create an array is by busing the Array constructor as shown below. In this example we are setting the length of the array to 10.
 ```javascript
 var myArray = new Array(10);
 alert(myArray.length);
 ```
+```
 Output : 10
+```
 
 Retrieving first and last elements from the array using the array index
-```javascript
+```js
 var myArray = [10, 20, 30];
 document.write("First element = " + myArray[0] + "[br/]");
 document.write("Last element = " + myArray[myArray.length - 1] + "[br/]");
 ```
 Output : 
+```
 First element = 10
 Last element = 30
-
+```
 Populating an array in JavaScript : There are several ways to populate an array in JavaScript. Let's look at those different option now.
 
 Declaring an array first and then populating using the array index
