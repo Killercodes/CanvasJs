@@ -73,8 +73,8 @@ var incrementClickCount = (function ()
 
 alert(incrementClickCount);
 ```
-In the Example 4 above, in the alert function we are calling the variable incrementClickCount without parentheses. At this point, when you invoke, you get the inner anonymous function expression in the alert. The outer self-invoking anonymous function run only once and sets clickCount variable to 0, and returns the inner function expression.
+In the Example 4 above, in the `alert` function we are calling the variable` incrementClickCount` without parentheses. At this point, when you invoke, you get the inner anonymous function expression in the `alert`. The outer self-invoking anonymous function run only once and sets `clickCoun`t variable to `0`, and returns the inner function expression.
 
-Whereas inner function has access to clickCount variable. Now every time we click the button, the inner function increments the clickCount variable. The important point to keep in mind is that no other script on the page has access to clickCount variable. The only way to change the clickCount variable is thru incrementClickCount function.
+Whereas inner function has access to `clickCount` variable. Now every time we click the button, the inner function increments the `clickCount` variable. The important point to keep in mind is that no other script on the page has access to `clickCount` variable. The only way to change the `clickCount` variable is thru `incrementClickCount` function.
 
 
