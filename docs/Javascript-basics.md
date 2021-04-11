@@ -23,7 +23,7 @@ Example :
 // This is a sinle line comment
 ```
 
-## 2) Multi Line Comment
+- Multi Line Comment
 Example:
 ``` js
 /* This is a 
