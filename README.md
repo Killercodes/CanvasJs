@@ -9,7 +9,7 @@ Games &amp; animations with HTML5 and Canvas
 
 
 ## Tools
-* [Canvas Live Editor](/tools/canvas-editor/)
+* [Canvas Live Editor](/tools/canvas-editor/index.html)
 
 
 ## Canvas Example
