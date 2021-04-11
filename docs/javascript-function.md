@@ -1,5 +1,5 @@
 # Functions in JavaScript
-A function is a block of reusable code. A function allows us to write code once and use it as many times as we want just by calling the function.
+A function is a block of reusable code. A function allows us to write code once and use it as many times as we want just by calling the function. Functions are one of the fundamental building blocks in JavaScript. A function is a JavaScript procedure - a set of statements that performs a specific task. To use a function, you must first define it; then your script can call it.
 
 JavaScript function syntax
 ```js
@@ -94,6 +94,28 @@ var sum = addNumbers(10, 20);
 alert(sum);
 ```
 
+## Defining a function
+A function definition consists of the `function` keyword, followed by
+- The `name` of the function.
+- A list of `arguments` to the function, enclosed in parentheses and separated by commas.
+- The JavaScript statements that define the function, enclosed in curly braces, `{ }`. The statements in a function can include calls to other functions defined in the current application.
+- 
+In Navigator JavaScript, it is good practice to define all your functions in the HEAD of a page so that when a user loads the page, the functions are loaded first.
+**For example**, here is the definition of a simple function named pretty_print:
+```js
+function pretty_print(str) {
+  document.write("<hr><p>" + str);
+}
+```
+
+, or semantically equivalent:
+```js
+var pretty_print = function(str) {
+  document.write("<hr><p>" + str);
+}
+```
+This function takes a string, str, as its argument, adds some HTML tags to it using the concatenation operator (+), and then displays the result to the current document using the write method.
+
 ## Different ways of defining functions in JavaScript
 
 In JavaScript, there are several different ways of defining functions.
@@ -117,7 +139,7 @@ Output :
 30
 ```
 
-Example 2 : A function call is present before the respective function declaration
+**Example 2 :** A function call is present before the respective function declaration
 
 In Example 1, we are first defining the function and then calling it. The call to a JavaScript function can be present anywhere, even before the function is declared. The following code also works just fine. In the example below, we are calling the function before it is declared.
 
@@ -281,8 +303,108 @@ Output :
 ```
 120
 ```
+## Using functions
+In a Navigator application, you can use (or call) any function defined in the current page. You can also use functions defined by other named windows or frames. In a LiveWire application, you can use any function compiled with the application.
+
+Defining a function does not execute it. You have to call the function for it to do its work. For example, if you defined the example function pretty_print in the **HEAD** of the document, you could call it as follows:
+```js
+<script type="text/javascript">
+  pretty_print("This is some text to display")
+</script>
+```
+The arguments of a function are not limited to strings and numbers. You can pass whole objects to a function, too.
+A function can even be recursive, that is, it can call itself. For example, here is a function that computes factorials:
+```js
+function factorial(n) {
+  if ((n == 0) || (n == 1)) return 1
+  else {
+    result = (n * factorial(n-1) )
+    return result
+  }
+}
+```
+You could then display the factorials of one through five as follows:
+```js
+for (x = 0; x < 5; x++) {
+  document.write("<br />", x, " factorial is ", factorial(x))
+}
+```
+The results are:
+```
+0 factorial is 1
+1 factorial is 1
+2 factorial is 2
+3 factorial is 6
+4 factorial is 24
+5 factorial is 120
+```
+
+## Built-in Functions
+
+###  isNaN(testValue)
+The isNaN function evaluates an argument to determine if it is **"NaN"** (not a number).
+ 
+#### Arguments
+testValue is the value you want to evaluate.
+On platforms that support NaN, the parseFloat and parseInt functions return "NaN" when they evaluate a value that is not a number. isNaN returns true if passed "NaN," and false otherwise.
+
+```js
+/* The following code evaluates floatValue to determine if it is a number and then calls a procedure accordingly: */
+floatValue=parseFloat(toFloat);
+if (isNaN(floatValue)) {
+  notFloat();
+} else {
+  isFloat();
+}
+```
+
+### parseFloat
+`parseFloat` parses its argument, the string str, and attempts to return a floating-point number. If it encounters a character other than a sign (+ or -), a numeral (0-9), a decimal point, or an exponent, then it returns the value up to that point and ignores that character and all succeeding characters. If the first character cannot be converted to a number, it returns "NaN" (not a number).
+```js
+parseFloat("5.347");
+```
+
+### parseInt
+`parseInt` parses its first argument, the string str, and attempts to return an integer of the specified radix (base), indicated by the second, optional argument, radix. For example, a radix of ten indicates to convert to a decimal number, eight octal, sixteen hexadecimal, and so on. For radixes above ten, the letters of the alphabet indicate numerals greater than nine. For example, for hexadecimal numbers (base 16), A through F are used.
+
+If `parseInt` encounters a character that is not a numeral in the specified radix, it ignores it and all succeeding characters and returns the integer value parsed up to that point. If the first character cannot be converted to a number in the specified radix, it returns "NaN." The `parseInt` function truncates numbers to integer values.
+```js
+parseInt("7");
+```
+
 
 # JavaScript arguments object
+
+The arguments of a function are maintained in an array. Within a function, you can address the parameters passed to it as follows:
+```
+functionName.arguments[i]
+```
+where functionName is the name of the function and i is the ordinal number of the argument, starting at zero. So, the first argument passed to a function named myfunc would be myfunc.arguments[0]. The total number of arguments is indicated by the variable arguments.length.
+
+Using the arguments array, you can call a function with more arguments than it is formally declared to accept using. This is often useful if you don't know in advance how many arguments will be passed to the function. You can use arguments.length to determine the number of arguments actually passed to the function, and then treat each argument using the arguments array.
+
+For example, consider a function defined to create HTML lists. The only formal argument for the function is a string that is "U" for an unordered (bulleted) list or "O" for an ordered (numbered) list. The function is defined as follows:
+```js
+function list(type) {
+  document.write("<" + type + "l>") // begin list
+  // iterate through arguments
+  for (var i = 1; i < list.arguments.length; i++)
+    document.write("<li>" + list.arguments[i]);
+  document.write("</" + type + "l>") // end list
+}
+```
+You can pass any number of arguments to this function, and it will then display each argument as an item in the indicated type of list. For example, the following call to the function
+```js
+list("o", "one", 1967, "three", "etc., etc...")
+```
+
+results in this output:
+```
+1.one
+2.1967
+3.three
+4.etc., etc...
+```
 The JavaScript arguments object is a local variable available within all functions. It contains all the function parameters that are passed to the function and can be indexed like an array. The length property of the arguments object returns the number of arguments passed to the function.
 
 **JavaScript arguments object example :**
