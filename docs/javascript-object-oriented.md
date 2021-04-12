@@ -1,4 +1,29 @@
 # JavaScript and object oriented programming
+
+- [JavaScript and object oriented programming](#javascript-and-object-oriented-programming)
+  - [Standard built-in objects :](#standard-built-in-objects-)
+  - [Custom objects :](#custom-objects-)
+  - [Creating an object in JavaScript using constructor function](#creating-an-object-in-javascript-using-constructor-function)
+  - [Creating an object in JavaScript using literal notation](#creating-an-object-in-javascript-using-literal-notation)
+  - [Object literal vs object constructor](#object-literal-vs-object-constructor)
+    - [Creating an object using object literal notation](#creating-an-object-using-object-literal-notation)
+    - [Creating an object using constructor function](#creating-an-object-using-constructor-function)
+      - [So, when to use one over the other?](#so-when-to-use-one-over-the-other)
+- [Inheritance in JavaScript](#inheritance-in-javascript)
+- [Abstract classes in JavaScript](#abstract-classes-in-javascript)
+- [Polymorphism in JavaScript](#polymorphism-in-javascript)
+- [Private members in JavaScript](#private-members-in-javascript)
+  - [Private fields -](#private-fields--)
+  - [Public fields -](#public-fields--)
+  - [Private functions -](#private-functions--)
+  - [Privileged methods -](#privileged-methods--)
+  - [Public methods -](#public-methods--)
+- [Properties in JavaScript](#properties-in-javascript)
+- [Overriding JavaScript functions](#overriding-javascript-functions)
+- [Object reflection in JavaScript](#object-reflection-in-javascript)
+
+***
+
 JavaScript is object oriented programming language. The following are the 4 pillars of any object oriented programming language.  
 1. Inheritance
 2. Encapsulation
