@@ -1,4 +1,13 @@
 # Error handling in JavaScript
+
+- [Error handling in JavaScript](#error-handling-in-javascript)
+  - [JavaScript try catch example :](#javascript-try-catch-example-)
+  - [JavaScript try catch finally example :](#javascript-try-catch-finally-example-)
+  - [Syntax errors and exceptions in JavaScript](#syntax-errors-and-exceptions-in-javascript)
+  - [JavaScript throw statement :](#javascript-throw-statement-)
+  - [JavaScript window onerror event](#javascript-window-onerror-event)
+***
+
 Use `try`/`catch`/`finally` to handle runtime errors in JavaScript. These runtime errors are called exceptions. An exception can occur for a variety of reasons. For example, referencing a variable or a method that is not defined can cause an exception. 
 
 The JavaScript statements that can possibly cause exceptions should be wrapped inside a try block. When a specific line in the try block causes an exception, the control is immediately transferred to the catch block skipping the rest of the code in the try block.
