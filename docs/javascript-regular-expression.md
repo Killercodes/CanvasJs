@@ -1,5 +1,20 @@
 # Using regular expressions in JavaScript
 
+- [Using regular expressions in JavaScript](#using-regular-expressions-in-javascript)
+  - [JavaScript strings and regular expressions](#javascript-strings-and-regular-expressions)
+  - [Using regular expression with JavaScript string object's `match()` method.](#using-regular-expression-with-javascript-string-objects-match-method)
+  - [Using regular expression with JavaScript string object's replace() method.](#using-regular-expression-with-javascript-string-objects-replace-method)
+  - [Using regular expression with JavaScript string object's `split()` method.](#using-regular-expression-with-javascript-string-objects-split-method)
+  - [Using regular expression with JavaScript string object's search() method.](#using-regular-expression-with-javascript-string-objects-search-method)
+  - [Global case insensitive match using a regular expression](#global-case-insensitive-match-using-a-regular-expression)
+  - [JavaScript RegExp object](#javascript-regexp-object)
+    - [Using a regular expression literal](#using-a-regular-expression-literal)
+    - [Using the constructor function of the RegExp object](#using-the-constructor-function-of-the-regexp-object)
+  - [Commonly used RegExp object properties](#commonly-used-regexp-object-properties)
+  - [Commonly used RegExp object methods](#commonly-used-regexp-object-methods)
+  - [Client side validation using regular expression](#client-side-validation-using-regular-expression)
+***
+
 > A regular expression is a sequence of characters that forms a search pattern. 
 
 Let us understand the use of regular expressions with an example. The following strings contain words and numbers. From the string we want to extract all the numbers. Bsically the program should work with any string.
