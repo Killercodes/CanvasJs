@@ -1,5 +1,9 @@
 
 # Static members in JavaScript
+
+- [Static members in JavaScript](#static-members-in-javascript)
+  - [Static methods in JavaScript :](#static-methods-in-javascript-)
+***
 What is the difference between static member and instance member and when to use one over the other
 
 An instance member belongs to a specific instance. So if I create 3 instances (objects) there will be 3 copies of instance fields in memory whereas there will ever be only one copy of a static field no matter how many instances we create.
