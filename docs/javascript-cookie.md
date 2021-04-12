@@ -1,3 +1,6 @@
+## Table of Contents
+- [Why are cookies needed](#Why are cookies needed)
+- [What are cookies](# What are cookies)
 
 # JavaScript Cookies
 
