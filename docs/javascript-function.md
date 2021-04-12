@@ -1,4 +1,27 @@
 # Functions in JavaScript
+
+- [Functions in JavaScript](#functions-in-javascript)
+  - [Defining a function](#defining-a-function)
+  - [Different ways of defining functions in JavaScript](#different-ways-of-defining-functions-in-javascript)
+  - [Function Hoisting :](#function-hoisting-)
+    - [Defining a JavaScript function using a function expression :](#defining-a-javascript-function-using-a-function-expression-)
+    - [Anonymous function expression example :](#anonymous-function-expression-example-)
+    - [Named function expression example :](#named-function-expression-example-)
+    - [Self invoking function expression example :](#self-invoking-function-expression-example-)
+  - [Recursive function in JavaScript](#recursive-function-in-javascript)
+    - [What is a recursive function?](#what-is-a-recursive-function)
+  - [Using functions](#using-functions)
+  - [Built-in Functions](#built-in-functions)
+    - [isNaN(testValue)](#isnantestvalue)
+      - [Arguments](#arguments)
+    - [parseFloat](#parsefloat)
+    - [parseInt](#parseint)
+- [JavaScript arguments object](#javascript-arguments-object)
+  - [Converting JavaScript arguments object to an array](#converting-javascript-arguments-object-to-an-array)
+  - [Converting JavaScript arguments object to an array using array literals](#converting-javascript-arguments-object-to-an-array-using-array-literals)
+
+***
+
 A function is a block of reusable code. A function allows us to write code once and use it as many times as we want just by calling the function. Functions are one of the fundamental building blocks in JavaScript. A function is a JavaScript procedure - a set of statements that performs a specific task. To use a function, you must first define it; then your script can call it.
 
 JavaScript function syntax
