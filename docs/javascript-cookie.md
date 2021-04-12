@@ -1,9 +1,17 @@
-## Table of Contents
-
 # JavaScript Cookies
 
-1. What are cookies and why are they needed
-2. How to write a cookie and read it later
+- [Why are cookies needed ?](#why-are-cookies-needed)
+- [What are cookies ?](#what-are-cookies)
+- [How does a cookie look ?](#how-does-a-cookie-look) 
+- [How to write a cookie ?](#how-to-write-a-cookie)
+- [How to read a cookie ?](#how-to-read-a-cookie)
+- [JavaScript cookie attributes](#javascript-cookie-attributes)
+- [What is the difference between expires and max-age attributes](#what-is-the-difference-between-expires-and-max-age-attributes)
+- [Store multiple key value pairs in a cookie](#store-multiple-key-value-pairs-in-a-cookie)
+- [Set and get multiple cookies in JavaScript](#set-and-get-multiple-cookies-in-javascript)
+- [Update and delete cookies](#update-and-delete-cookies)
+- [Cookie limitations](#cookie-limitations)
+
 
 ## Why are cookies needed
 Web applications work on HTTP protocol which is a stateless protocol. This means after the web server has processed the client request for a web page, the web server will not remember anything about the client that made the request. Let us understand what this statement means with an example.
@@ -27,12 +35,12 @@ color=red;expires=Fri, 5 Aug 2016 01:00:00 UTC;
 In the cookie string above we have 2 name-value pairs. 
 The expires attribute specifies when the cookie is going to expire. By default cookies are deleted when the current browser session ends. If you want to store the cookie on the client computer even after the browser session has ended then specify either expires or max-age attributes. The color attribute is set to "red".
 
-## How to write a cookie : 
+## How to write a cookie
 Use the document object's cookie property to write the cookie.
 ```js
 document.cookie = "color=red;expires=Fri, 5 Aug 2016 01:00:00 UTC;"
 ```
-## How to read a cookie : 
+## How to read a cookie
 Use the document object's cookie property to read the cookie.
 ```js
 var cookieString = document.cookie;
@@ -312,7 +320,7 @@ document.cookie = "color=red;expires=Mon, 01 Jan 1900 01:00:00 UTC;";
 
 > **Please note:** Users can also use the browser interface to delete cookies anytime they want.
 
-### Cookie limitations : 
+## Cookie limitations 
 1. What is the maximum allowed cookie size per cookie
 2. How many cookies are allowed per domain
 
