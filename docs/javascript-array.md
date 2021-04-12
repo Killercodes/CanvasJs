@@ -1,4 +1,23 @@
 # Arrays in JS
+
+[Arrays in JS](#arrays-in-js)
+  - [Array Push & Pop](#array-push--pop)
+    - [JavaScript push() method](#javascript-push-method)
+    - [JavaScript pop() method](#javascript-pop-method)
+    - [JavaScript unshift() Method](#javascript-unshift-method)
+    - [JavaScript shift() Method](#javascript-shift-method)
+  - [Array mutators](#array-mutators)
+    - [JavaScript sort method :](#javascript-sort-method-)
+  - [Array Filters](#array-filters)
+    - [Parameters](#parameters)
+      - [callbackFunction](#callbackfunction)
+      - [thisArg](#thisarg)
+    - [Callback Function Syntax](#callback-function-syntax)
+      - [Callback Function Parameters](#callback-function-parameters)
+  - [Two dimensional array in javascript](#two-dimensional-array-in-javascript)
+
+***
+
 Arrays are collections and ZERO indexed. This means the first element is at index ZERO and the last element is at index arrayObject.length - 1. length property of the array object returns the size of the array.
 
 The following JavaScript code creates an empty array. length property returns 0 in this case.
