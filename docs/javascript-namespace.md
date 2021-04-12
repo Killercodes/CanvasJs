@@ -1,4 +1,14 @@
 # Javascript Namespace
+
+
+- [Javascript Namespace](#javascript-namespace)
+  - [Why it's needed](#why-its-needed)
+    - [HTML Page code :](#html-page-code-)
+- [Creating Namespaces in JavaScript](#creating-namespaces-in-javascript)
+  - [Creating namespace with const](#creating-namespace-with-const)
+    - [Why is this important?](#why-is-this-important)
+***
+
 JavaScript does not provide namespace by default. However, we can replicate this functionality by making a global object which can contain all functions and variables.
 Namespacing is the act of wrapping a set of entities, variables, functions, objects under a single umbrella term.
 
