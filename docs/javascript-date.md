@@ -1,5 +1,13 @@
-
 # Working with `Date()` in javascript
+
+- [Working with `Date()` in javascript](#working-with-date-in-javascript)
+  - [`getFullYear()`](#getfullyear)
+  - [`getMonth()`](#getmonth)
+  - [`getDate()`](#getdate)
+  - [`getDay()`](#getday)
+***
+
+
 To create date object in JavaScript use `Date()` constructor
 
 The following example writes the current Date and Time to the web page
