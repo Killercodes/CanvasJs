@@ -10,7 +10,8 @@ Games &amp; animations with HTML5 and Canvas
 
 
 # Tools
-* [Canvas Live Editor](/tools/canvas-editor/index.html)
+* [Canvas Live Editor](https://killercodes.github.io/js/tools/canvas-editor/index.html)
+
 
 
 # Canvas Example
