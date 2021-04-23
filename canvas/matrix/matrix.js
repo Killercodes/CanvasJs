@@ -7,7 +7,6 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 // Setting up the letters
-//var letters = 'ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ';
 var letters = "abcdefgh0123456789";
 letters = letters.split('');
 
@@ -24,6 +23,7 @@ for (var i = 0; i < columns; i++) {
 //Clear
 function clear()
 {
+    //ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "rgba(0, 0, 0,0.05";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
@@ -93,22 +93,47 @@ function color(bool){
     }
 }
 
+function Print(msg)
+{
+    ctx.fillStyle = color("g");
+    ctx.font = "Bold " + fontSize + "px Consolas";
+    //ctx.shadowBlur = 5;
+    //ctx.shadowColor = "#FFF";
+    ctx.fillText (msg, canvas.width/2  - (fontSize/2 * msg.length/2), canvas.height/2);
+}
+
 
 // Setting up the draw function
 function draw() {
 
     clear();
+    
 
   for (var i = 0; i < drops.length; i++) {
     var text = letters[Math.floor(Math.random() * letters.length)];
-    ctx.font = 'Bold 20px Consolas';
+    ctx.font = "Bold " + fontSize + "px Consolas";
     
     if(Math.random() < 0.8)
-        ctx.fillStyle = "#" + color("g-a");//'#afa';
+    {
+        if(Math.random() < 0.8 && Math.random() > 0.7)
+            ctx.fillStyle = "#" + color("g");//'#afa';
+        else
+            ctx.fillStyle = "#" + color("g-a");//'#afa';
+    }
     else
+    {
         ctx.fillStyle = "#" + color("w-a");//'#afa';
+        
+    }
 
+    
+    Print("The MatriX has you..");
+        
+    ctx.shadowBlur = 15;
+    ctx.shadowColor = "#0F0";// + color("g-a");
     ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+    ctx.shadowColor = "#000";// + color("g-a");
+
     //ctx.fillText(text, drops[i] * fontSize, i * fontSize);
     drops[i]++;
     if (drops[i] * fontSize > canvas.height && Math.random() > .95) {
