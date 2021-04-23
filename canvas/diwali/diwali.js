@@ -18,7 +18,7 @@ var SCREEN_WIDTH = window.innerWidth,
 var FPS = 30;
 var ROCKET_PER_SECOND = 10;
 
-var MAX_PARTICLES = 9999;
+var MAX_PARTICLES = 5000;
 var MIN_PARTICLES = 100;
 var SCREEN_FADE = 0.3;
 
@@ -166,10 +166,10 @@ window.addEventListener('mousedown',function(){
 
 function launch() {
    //launchFrom(mousePos.x);
-   // var mult_place = Math.random() * canvas.width;
-   // launchFrom(mult_place);
+    var mult_place = Math.random() * canvas.width;
+    launchFrom(mult_place);
    //center
-    launchFrom(canvas.width /2);
+    //launchFrom(canvas.width /2);
 }
 
 function launchFrom(x) {
@@ -194,7 +194,7 @@ function RefreshScreen(screenFade)
     //context.clearRect(0,0,SCREEN_WIDTH, SCREEN_HEIGHT);
     //context.globalAlpha = 0.52;
 
-	wishes();
+	//wishes();
 }
 
 function GetURLParameter(sParam)
@@ -237,7 +237,7 @@ var seed = { Id : 0 , size : 15 , max : 5 };
 function loop() {
 
     // Clear & Refresh screen
-    RefreshScreen(0.53);
+    RefreshScreen(0.3);
     var existingRockets = [];
 
     //

@@ -1,28 +1,35 @@
 // get the canvas from html
 var canvas = document.querySelector('canvas');
-
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 //Get the context
 var ctx = canvas.getContext('2d');
 
+const NUM_PARTICLES = 1000;
 //mouse object
 var mouse = {
     x:undefined,
     y:undefined
 }
 
-var maxRadius = 10;
-var minRadius = 1;
+var maxRadius = 15;
+var minRadius = 5;
 
 var colorArray = [
     '#2c3e50',
     '#e74c3c',
     '#ecf0f1',
     '#3498db',
-    '#2980b9'
+    '#2980b9', '#FF0000','#00FF00'
 ];
+
+function RColor(){
+    var result = "#";    
+    var r = Math.floor(Math.random() * 4294967295);// 16777215); //4294967295);
+    result += r.toString(16);
+    return result;
+}
 
 //Events
 window.addEventListener('resize',function(){
@@ -35,7 +42,7 @@ window.addEventListener('resize',function(){
 window.addEventListener('mousemove',function(){    
     mouse.x = event.x;
     mouse.y = event.y;
-    console.log(mouse);
+    //console.log(mouse);
 });
 
 // Circle
@@ -45,16 +52,18 @@ function Circle(x, y, dx, dy, radius) {
     this.dy = dy;
     this.dx = dx;
     this.radius = radius;
-    this.minRadius =radius
-    this.color = colorArray[Math.floor(Math.random() * colorArray.length)];
+    this.minRadius =radius;
+    this.color = RColor();//colorArray[Math.floor(Math.random() * colorArray.length)];
 
     //Draw
     this.draw = function () {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-        ctx.strokeStyle = 'blue';
+        //ctx.strokeStyle = 'blue';
         //c.stroke();
         ctx.fillStyle = this.color;
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = this.color;
         ctx.fill();
     }
 
@@ -92,7 +101,7 @@ var circleArray = [];
 //Initialize
 function init(){
     circleArray = [];    
-    for(var i = 0; i<400; i++){
+    for(var i = 0; i<NUM_PARTICLES; i++){
         var radius = Math.random() * 3 + 1; //30;
         var x = Math.random() * (innerWidth - radius * 2) + radius;
         var y = Math.random() * (innerHeight - radius * 2) + radius;
@@ -108,6 +117,8 @@ function init(){
 function animate() {
     requestAnimationFrame(animate);
     ctx.clearRect(0, 0, innerWidth, innerHeight);
+    //ctx.fillStyle = "rgba(0,0,0,0.9)";//grd;
+    //ctx.fillRect(0, 0, innerWidth, innerHeight);
 
     for(var i = 0; i <circleArray.length; i++){
         circleArray[i].update();

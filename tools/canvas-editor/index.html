@@ -19,6 +19,9 @@
         textarea {
             resize: vertical;
         }
+        #run{
+            background-color: limegreen;
+        }
     </style>
     <script>
 
@@ -27,25 +30,29 @@
 
 <body>
     <div>
-        <span>Canvas<div class="playable-buttons"><input id="edit" type="button" value="Edit" /><input id="reset"
-                    type="button" value="Reset" /></div></span>
+        <span>Canvas
+        <div class="playable-buttons">
+            <input id="edit" type="button" value="Edit" />
+            <input id="run" type="button" value="Run" />
+            <input id="reset" type="button" value="Reset"/>
+        </div>
+        </span>
         <div style="width:50%; float:left;">
             <canvas id="canvas" class="playable-canvas"></canvas>
         </div>
         <div style="float:left;width:50%;">
             <textarea id="code" class="playable-code" rows="50" cols="127">
-                canvas.width=canvas.height=800;
-                ctx.fillStyle = '#FA0';
-                ctx.fillRect(10, 10, 100, 100);
-                ctx.fillStyle = '#00F';
-                ctx.font = 'Italic 30px Sans-Serif';
-                ctx.textBaseline = 'Top';
-                ctx.fillText ('Hello world!', 40, 100);
-                                
-                ctx.font = 'Bold 30px Sans-Serif';
-                ctx.strokeText('Hello world!', 40, 50);                                                
+    canvas.width=canvas.height=800;
+    ctx.fillStyle = '#FA0';
+    ctx.fillRect(10, 10, 100, 100);
+    ctx.fillStyle = '#00F';
+    ctx.font = 'Italic 30px Sans-Serif';
+    ctx.textBaseline = 'Top';
+    ctx.fillText ('Hello world!', 40, 100);
+                    
+    ctx.font = 'Bold 30px Sans-Serif';
+    ctx.strokeText('Hello world!', 40, 50);                                                
             </textarea>
-        </div>
     </div>
 
     <script src="CanvasEditor.js"></script>
