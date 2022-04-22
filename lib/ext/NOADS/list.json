@@ -1,0 +1,9 @@
+[
+    "*://*.doubleclick.net/*",
+    "*://*.googleadservices.com/*",
+    "*://*.googlesyndication.com/*",
+    "*://*.moat.com/*",
+    "*://*.taboola.com/*",
+    "*://*.pubmine.com/*",
+    "*://*.adroll.com/*"
+]
