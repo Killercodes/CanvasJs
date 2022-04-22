@@ -1,4 +1,5 @@
-  [
+  {
+    urls:[
     "*://*.doubleclick.net/*",
     "*://*.googleadservices.com/*",
     "*://*.googlesyndication.com/*",
@@ -6,4 +7,5 @@
     "*://*.taboola.com/*",
     "*://*.pubmine.com/*",
     "*://*.adroll.com/*"
-  ]
+    ]
+  }
