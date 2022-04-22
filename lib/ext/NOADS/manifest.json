@@ -1,0 +1,10 @@
+{
+    "manifest_version": 2,
+    "name": "NOADS",
+    "version": "2.3",
+    "description": "No Ads is a URL/Request Blocking Extension by (c)killercodes.github.io \n This will block all the ads coming from a list",
+    "permissions": ["webRequest", "webRequestBlocking", "<all_urls>"],
+    "background": {
+      "scripts": ["noads.js"]
+    }    
+}
