@@ -580,6 +580,58 @@ With Internet Explorer 9 (and later versions) & all the other browsers
 event.stopPropagation()
 ```
 
+## Custom Eventes in Javascript
+
+A custom event can be created with
+```js
+var event1 = new Event("onEvent1",{bubbles:true,cancelable:true}); 
+```
+
+and can be dispatched with
+```js
+window.dispatchEvent(event1);
+```
+
+
+this is how to create and dispatch event 
+```js
+  function create_DispatchEvent() 
+  {
+    var event1 = new Event("onEvent1",{bubbles:true,cancelable:true});        
+    window.dispatchEvent(event1);        
+  }
+```
+
+But once all these things are done you need to listen for it with:
+```js
+    window.addEventListener('onEvent1',function(e) {  });
+```
+
+### For Example i can create `OnChange` event as 
+```js
+var OnChange  = new Event("OnChangeEvent",{bubbles:true,cancelable:true});
+```
+Now we can define an Handler for thsi Event as :
+
+```js
+window.addEventListener('OnChangeEvent',function(e) {  });
+
+//or
+function OnChangeEventhandler(e)
+{
+  //handler code with parameter "e"
+}
+
+window.addEventListener('onEvent1',OnChangeEventhandler(e));
+```
+
+Then we can invoke this even from any where in the form, this in turen will ccall the function
+
+```js
+window.dispatchEvent(OnChange);
+```
+
+
 ## JavaScript event capturing
 Event capturing is the opposite of event bubbling. We discussed event bubbling in detail in Part 40 of JavaScript tutorial.
 
