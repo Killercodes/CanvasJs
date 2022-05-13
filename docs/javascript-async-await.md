@@ -5,7 +5,7 @@ Functions running in parallel with other functions are called asynchronous
 
 > **await** makes a function wait for a Promise
 
-## Async Syntax
+# Async Syntax
 The keyword async before a function makes the function return a promise:
 
 Example
@@ -26,7 +26,9 @@ myFunction().then(
   function(value) { /* code if successful */ },
   function(error) { /* code if some error */ }
 );
+```
 Example
+```js
 async function myFunction() {
   return "Hello";
 }
@@ -47,7 +49,7 @@ myFunction().then(
 );
 ```
 
-## Await Syntax
+# Await Syntax
 The keyword await before a function makes the function wait for a promise:
 ```js
 let value = await promise;
