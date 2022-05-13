@@ -145,7 +145,7 @@ In JavaScript, there are several different ways of defining functions.
 
 Defining a function using function declaration
 
-**Example 1 :** Declaring a function first and then calling it.
+### **Function Declarations :** Declaring a function first and then calling it.
 ```js
 function addNumbers(firstNumber, secondNumber) 
 {
@@ -273,6 +273,30 @@ These are called with different names
 - Immediately-Invoked Function Expression (IIFE)
 - Self-executing anonymous functions
 - Self-invoked anonymous functions
+
+
+### Arrow Functions
+> Arrow functions allows a short syntax for writing function expressions.
+
+You don't need the function keyword, the return keyword, and the curly brackets.
+
+```js
+// ES5
+var x = function(x, y) {
+  return x * y;
+}
+
+// ES6
+const x = (x, y) => x * y;
+```
+- Arrow functions do not have their own this. They are not well suited for defining object methods.
+
+- Arrow functions are not hoisted. They must be defined before they are used.
+
+Using const is safer than using var, because a function expression is always constant value.
+
+You can only omit the return keyword and the curly brackets if the function is a single statement. Because of this, it might be a good habit to always keep them:
+
 
 ## Recursive function in JavaScript
 Recursion is a programming concept that is applicable to all programming languages including JavaScript. 
