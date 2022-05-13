@@ -15,7 +15,7 @@ function Populate(repoPath,folderName)
             var actualpath= "https://killercodes.github.io/"+repoName+"/" + file.path;
             var fileName = (file.path).replace(".md","");
             actualpath = actualpath.replace(".md","");
-            htmlString = `<a href="${actualpath}" target="IFcontent">${file.name}</a>`;
+            htmlString = `<a href="${actualpath}" target="IFcontent">${(file.name).replace(".md","")}</a>`;
             var row2 = table2.insertRow(-1);
             var cell2 = row2.insertCell(0);
             cell2.innerHTML = htmlString;
