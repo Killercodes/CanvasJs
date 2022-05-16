@@ -57,7 +57,7 @@ The difference is:
 - The `apply()` method is very handy if you want to use an array instead of an argument list.
 
 ## The apply() Method with Arguments
-> The apply() method accepts arguments in an array:
+The apply() method accepts arguments in an array:
 ```js
 function fullName(city, country) 
 {
@@ -73,6 +73,6 @@ fullName.apply(person1, ["bangalore", "India"]);
 //fullName.call(person1, "bangalore", "India"); //Call
 ```
 
-> In JavaScript strict mode, if the first argument of the apply() method is not an object, it becomes the owner (object) of the invoked function. In "non-strict" mode, it becomes the global object.
+In JavaScript strict mode, if the first argument of the apply() method is not an object, it becomes the owner (object) of the invoked function. In "non-strict" mode, it becomes the global object.
 
 
