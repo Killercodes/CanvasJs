@@ -74,6 +74,8 @@ document.write("e2.name = " + e2.getName() + "[br/]");
 The following are the advantages of using the prototype object to add functions.
 1. No matter how many objects you create, functions are loaded only once into memory
 2. Allows you to override functions if required.
+
+
 ```js
 function Employee(name) 
 {
@@ -90,9 +92,8 @@ var e2 = new Employee("Sara");
 
 document.write("e1.name = " + e1.getName() + "[br/]");
 document.write("e2.name = " + e2.getName() + "[br/]");
-```
-Output :
-```
-e1.name = Mark
-e2.name = Sara
+
+//Output :
+//e1.name = Mark
+//e2.name = Sara
 ```
