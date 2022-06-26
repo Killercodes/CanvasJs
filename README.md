@@ -2,8 +2,11 @@
 
 Games &amp; animations with HTML5 and Canvas
 
+# [Search Docs](/search)
+ 
+
 # Docs & Tutorial
-* [Javascript Basics](/docs/Javascript-basics.md)
+* [Javascript Basics](/docs/js-basics.md)
 * [Functional Inheritance](/docs/Functional%20Inheritance.md)
 * [What is a Closure ?](/docs/What-is-a-closure.md)
 * [Keylogging in Javascript](/docs/Keylogging-in-javaScript.md)
