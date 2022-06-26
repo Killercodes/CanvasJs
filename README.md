@@ -2,7 +2,7 @@
 
 Games &amp; animations with HTML5 and Canvas
 
-# [Search Docs](/search)
+# [Search Docs](/js/search)
  
 
 # Docs & Tutorial
