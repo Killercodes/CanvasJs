@@ -1,5 +1,145 @@
-Dummies for JS
-If you are dummy you are welcome
+
+## Index
+
+- [JavaScript Basics](#javascript-basics)
+  - [Is JavaScript case sensitive](#is-javascript-case-sensitive)
+  - [Data types in JavaScript](#data-types-in-javascript)
+  - [Inline vs external javascript](#inline-vs-external-javascript)
+    - [Advantages of external JavaScript over inline JavaScript](#advantages-of-external-javascript-over-inline-javascript)
+- [Arrays in JS](#arrays-in-js)
+  - [Array Push & Pop](#array-push--pop)
+    - [JavaScript push() method](#javascript-push-method)
+    - [JavaScript pop() method](#javascript-pop-method)
+    - [JavaScript unshift() Method](#javascript-unshift-method)
+    - [JavaScript shift() Method](#javascript-shift-method)
+  - [Array mutators](#array-mutators)
+    - [JavaScript sort method :](#javascript-sort-method-)
+    - [JavaScript reverse method :](#javascript-reverse-method-)
+    - [JavaScript splice method :](#javascript-splice-method-)
+  - [Array Filters](#array-filters)
+    - [callbackFunction](#callbackfunction)
+    - [thisArg](#thisarg)
+    - [Callback Function Syntax](#callback-function-syntax)
+      - [Callback Function Parameters](#callback-function-parameters)
+  - [Two dimensional array in javascript](#two-dimensional-array-in-javascript)
+- [Functions in JavaScript](#functions-in-javascript)
+  - [Points to remember](#points-to-remember)
+  - [Calling the JavaScript function :](#calling-the-javascript-function-)
+    - [What happens when you do not specify values for the function parameters when calling the function ?](#what-happens-when-you-do-not-specify-values-for-the-function-parameters-when-calling-the-function-)
+    - [What happens when you specify too many parameter values when calling the function?](#what-happens-when-you-specify-too-many-parameter-values-when-calling-the-function)
+    - [Should a javascript function always return a value ?](#should-a-javascript-function-always-return-a-value-)
+    - [Different ways of defining functions in JavaScript](#different-ways-of-defining-functions-in-javascript)
+  - [Function Hoisting](#function-hoisting)
+    - [Defining a JavaScript function using a function expression :](#defining-a-javascript-function-using-a-function-expression-)
+    - [Anonymous function expression example :](#anonymous-function-expression-example-)
+  - [Recursive function in JavaScript](#recursive-function-in-javascript)
+    - [What is a recursive function?](#what-is-a-recursive-function)
+- [JavaScript arguments object](#javascript-arguments-object)
+  - [Converting JavaScript arguments object to an array](#converting-javascript-arguments-object-to-an-array)
+  - [Converting JavaScript arguments object to an array using array literals](#converting-javascript-arguments-object-to-an-array-using-array-literals)
+- [Local and global variables in javascript](#local-and-global-variables-in-javascript)
+  - [JavaScript local variables :](#javascript-local-variables-)
+  - [JavaScript global variables :](#javascript-global-variables-)
+- [Closures in JavaScript](#closures-in-javascript)
+  - [What is a closure](#what-is-a-closure)
+  - [JavaScript closure example](#javascript-closure-example)
+  - [Using a JavaScript closure :](#using-a-javascript-closure-)
+- [Error handling in JavaScript](#error-handling-in-javascript)
+  - [JavaScript try catch example :](#javascript-try-catch-example-)
+  - [JavaScript try catch finally example :](#javascript-try-catch-finally-example-)
+  - [Syntax errors and exceptions in JavaScript](#syntax-errors-and-exceptions-in-javascript)
+  - [JavaScript throw statement :](#javascript-throw-statement-)
+  - [JavaScript window onerror event](#javascript-window-onerror-event)
+- [Working with dates in javascript](#working-with-dates-in-javascript)
+  - [`getFullYear()`](#getfullyear)
+  - [`getMonth()`](#getmonth)
+  - [`getDate()`](#getdate)
+  - [`getDay()`](#getday)
+- [JavaScript timing events](#javascript-timing-events)
+  - [setInterval(func, delay)](#setintervalfunc-delay)
+  - [setTimeout(func, delay)](#settimeoutfunc-delay)
+  - [clearInterval(intervalID)](#clearintervalintervalid)
+- [Events in JavaScript](#events-in-javascript)
+  - [JavaScript form validation example :](#javascript-form-validation-example-)
+  - [Event handlers in JS](#event-handlers-in-js)
+    - [First let us understand, what is DOM](#first-let-us-understand-what-is-dom)
+    - [`addeventlistener` and `removeeventlistener` in JavaScript](#addeventlistener-and-removeeventlistener-in-javascript)
+  - [JavaScript event object](#javascript-event-object)
+  - [Event bubbling in JavaScript](#event-bubbling-in-javascript)
+    - [What is event bubbling](#what-is-event-bubbling)
+    - [Stopping event bubbling :](#stopping-event-bubbling-)
+  - [JavaScript event capturing](#javascript-event-capturing)
+  - [Preventing browser default action](#preventing-browser-default-action)
+  - [Using the event object to disable right click](#using-the-event-object-to-disable-right-click)
+    - [JavaScript to detect which mouse button is clicked](#javascript-to-detect-which-mouse-button-is-clicked)
+  - [JavaScript mouse events](#javascript-mouse-events)
+  - [JavaScript popup window](#javascript-popup-window)
+- [Using regular expressions in JavaScript](#using-regular-expressions-in-javascript)
+  - [JavaScript strings and regular expressions](#javascript-strings-and-regular-expressions)
+  - [Using regular expression with JavaScript string object's `match()` method.](#using-regular-expression-with-javascript-string-objects-match-method)
+  - [Using regular expression with JavaScript string object's replace() method.](#using-regular-expression-with-javascript-string-objects-replace-method)
+  - [Using regular expression with JavaScript string object's `split()` method.](#using-regular-expression-with-javascript-string-objects-split-method)
+  - [Using regular expression with JavaScript string object's search() method.](#using-regular-expression-with-javascript-string-objects-search-method)
+  - [Global case insensitive match using a regular expression](#global-case-insensitive-match-using-a-regular-expression)
+  - [JavaScript RegExp object](#javascript-regexp-object)
+    - [Using a regular expression literal](#using-a-regular-expression-literal)
+    - [Using the constructor function of the RegExp object](#using-the-constructor-function-of-the-regexp-object)
+  - [Commonly used RegExp object properties](#commonly-used-regexp-object-properties)
+  - [Commonly used RegExp object methods](#commonly-used-regexp-object-methods)
+  - [Client side validation using regular expression](#client-side-validation-using-regular-expression)
+- [JavaScript and object oriented programming (OOP)](#javascript-and-object-oriented-programming-oop)
+  - [Standard built-in objects :](#standard-built-in-objects-)
+  - [Custom objects :](#custom-objects-)
+  - [Creating an object in JavaScript using constructor function](#creating-an-object-in-javascript-using-constructor-function)
+  - [Creating an object in JavaScript using literal notation](#creating-an-object-in-javascript-using-literal-notation)
+  - [Object literal vs object constructor](#object-literal-vs-object-constructor)
+    - [Creating an object using object literal notation](#creating-an-object-using-object-literal-notation)
+    - [Creating an object using constructor function](#creating-an-object-using-constructor-function)
+      - [So, when to use one over the other?](#so-when-to-use-one-over-the-other)
+  - [Global namespace pollution in JavaScript](#global-namespace-pollution-in-javascript)
+    - [HTML Page code :](#html-page-code-)
+- [Namespaces in JavaScript](#namespaces-in-javascript)
+- [Private members in JavaScript](#private-members-in-javascript)
+    - [Can we modify a private field outside of the constructor function?](#can-we-modify-a-private-field-outside-of-the-constructor-function)
+  - [Private fields](#private-fields)
+  - [Public fields](#public-fields)
+  - [Private functions](#private-functions)
+  - [Privileged methods](#privileged-methods)
+  - [Public methods](#public-methods)
+- [Properties in JavaScript](#properties-in-javascript)
+- [Static members in JavaScript](#static-members-in-javascript)
+  - [Static methods in JavaScript :](#static-methods-in-javascript-)
+- [Prototype in JavaScript](#prototype-in-javascript)
+  - [Using the prototype object to add functions :](#using-the-prototype-object-to-add-functions-)
+- [Overriding JavaScript functions](#overriding-javascript-functions)
+- [Inheritance in JavaScript](#inheritance-in-javascript)
+- [Abstract classes in JavaScript](#abstract-classes-in-javascript)
+- [Polymorphism in JavaScript](#polymorphism-in-javascript)
+- [Object reflection in JavaScript](#object-reflection-in-javascript)
+- [Strict Mode in JavaScript](#strict-mode-in-javascript)
+- [JavaScript Cookies](#javascript-cookies)
+  - [Why are cookies needed](#why-are-cookies-needed)
+  - [What are cookies](#what-are-cookies)
+  - [How does a cookie look](#how-does-a-cookie-look)
+  - [How to write a cookie :](#how-to-write-a-cookie-)
+  - [How to read a cookie :](#how-to-read-a-cookie-)
+  - [JavaScript cookie attributes](#javascript-cookie-attributes)
+    - [Optional Cookie Attributes](#optional-cookie-attributes)
+  - [What is the difference between expires and max-age attributes](#what-is-the-difference-between-expires-and-max-age-attributes)
+    - [domain attribute :](#domain-attribute-)
+    - [path attribute :](#path-attribute-)
+    - [secure attribute :](#secure-attribute-)
+  - [Store multiple key value pairs in a cookie](#store-multiple-key-value-pairs-in-a-cookie)
+  - [Set and get multiple cookies in JavaScript](#set-and-get-multiple-cookies-in-javascript)
+  - [Update and delete cookies](#update-and-delete-cookies)
+    - [Updating a cookie :](#updating-a-cookie-)
+    - [Deleting a cookie :](#deleting-a-cookie-)
+    - [Cookie limitations :](#cookie-limitations-)
+      - [How to check if cookies are enabled](#how-to-check-if-cookies-are-enabled)
+      - [How to check if JavaScript is enabled](#how-to-check-if-javascript-is-enabled)
+- [window location in JavaScript](#window-location-in-javascript)
+
+
 
 # JavaScript Basics
 
@@ -86,11 +226,9 @@ When a + operator is used with a string and a number, JavaScript converts the nu
     var b = 10;
     var c = a + b;
     alert(c);
-```
 
-Output : 
-```
-Number is 10
+//Output : 
+//Number is 10
 ```
 
 ``` javascript
@@ -98,11 +236,9 @@ Number is 10
     var b = 10;
     var c = a + b;
     alert(c);
-```
 
-Output : 
-```
-5010
+//Output : 
+//5010
 ```
 
 But if you use a minus operator, numeric value is not converted to string
@@ -111,11 +247,10 @@ But if you use a minus operator, numeric value is not converted to string
     var b = 10;
     var c = a - b;
     alert(c);
-```
 
-Output : 
-```
-40
+
+//Output : 
+//40
 ```
 
 ## Inline vs external javascript
@@ -126,7 +261,7 @@ Here we will discuss
 JavaScript can be stored either inline on the page or in an external .js file. Let's look at an example of both the approaches.
 
 Inline JavaScript example : In this example, `IsEven()` JavaScript function is present inline on the page.
-``` javascript
+```html
 <html>
 <head>
     <script type="text/javascript">
@@ -159,7 +294,7 @@ External JavaScript example : Steps to store JavaScript in an external .js file
 2. From the "Add New Item" dialog box select "JScript File". Name the file "ExternalJavaScript.js" and click Add.
 3. Copy and paste the following JavaScript function in the "ExternalJavaScript.js" file
 
-``` javascript 
+```js
 function IsEven() 
 {
     var number = document.getElementById("TextBox1").value;
@@ -194,7 +329,8 @@ function IsEven()
 </body>
 </html>
 ```
-Advantages of external JavaScript over inline JavaScript : Here are some of the general advantages of external JavaScript over inline JavaScript
+### Advantages of external JavaScript over inline JavaScript
+Here are some of the general advantages of external JavaScript over inline JavaScript
 
 - **Maintainability :** JavaScript in external files can be referenced on multiple pages without having to duplicate the code inline on every page. If something has to change, you only have one place to change. So external JavaScript code can be reused and maintenance will be much easier.
 
@@ -210,21 +346,17 @@ The following JavaScript code creates an empty array. length property returns 0 
 ```javascript
 var emptyArray = [];
 alert(emptyArray.length);
-```
 
-Output :
-```
- 0
+//Output :
+// 0
 ```
 Another way to create an array is by busing the Array constructor as shown below. In this example we are setting the length of the array to 10.
 ```javascript
 var myArray = new Array(10);
 alert(myArray.length);
-```
 
-Output : 
-```
-10
+//Output : 
+//10
 ```
 
 Retrieving first and last elements from the array using the array index
@@ -232,11 +364,10 @@ Retrieving first and last elements from the array using the array index
 var myArray = [10, 20, 30];
 document.write("First element = " + myArray[0] + "[br/]");
 document.write("Last element = " + myArray[myArray.length - 1] + "[br/]");
-```
-Output : 
-```
-First element = 10
-Last element = 30
+
+//Output : 
+//First element = 10
+//Last element = 30
 ```
 Populating an array in JavaScript : There are several ways to populate an array in JavaScript. Let's look at those different option now.
 
@@ -249,11 +380,10 @@ myArray[1] = 20;
 myArray[2] = 30;
         
 alert(myArray);
-```
 
-Output :
-```
-10, 20, 30
+
+//Output :
+//10, 20, 30
 ```
 
 Declaring and populating the array at the same time
@@ -261,11 +391,10 @@ Declaring and populating the array at the same time
 
 var myArray = [10, 20, 30];        
 alert(myArray);
-```
 
-Output : 
-```
-10, 20, 30
+
+//Output : 
+//10, 20, 30
 ```
 
 Declaring an array first using the Array constructor and then populating using the array index. Though the initial size is set to 3, adding a fourth element to the array will not throw an exception, because arrays in JavaScript can grow in size.
@@ -277,11 +406,9 @@ myArray[1] = 20;
 myArray[2] = 30;      
 
 alert(myArray);
-```
 
-Output : 
-```
-10, 20, 30
+//Output : 
+//10, 20, 30
 ```
 
 Declaring and populating the array at the same time using the Array constructor
@@ -289,12 +416,9 @@ Declaring and populating the array at the same time using the Array constructor
 
 var myArray = new Array(10, 20, 30);
 alert(myArray);
-```
 
-
-Output : 
-```
-10, 20, 30
+//Output : 
+//10, 20, 30
 ```
 
 > **Please note :** If only one number is passed to the Array constructor, then that number is used to set the size of the array. If more that one number is passed then those will be used as elements to populate the array.
@@ -308,13 +432,11 @@ for (var i = 0; i [= 5; i++)
 {
     evenNumbersArray[i] = i * 2;
 }
+
 alert(evenNumbersArray);
-```
 
-
-Output :
-```
- 0,2,4,6,8,10
+//Output :
+// 0,2,4,6,8,10
 ```
 
 Retrieving elements from the array using for loop : 
@@ -329,17 +451,17 @@ for (var i = 0; i [ evenNumbersArray.length; i++)
 {
     document.write(evenNumbersArray[i] + "[br/]");
 }
-```
 
 
+/*
 Output :
-```
 0
 2
 4
 6
 8
 10
+*/
 ```
 
 ## Array Push & Pop
@@ -458,10 +580,9 @@ Example : Notice that the strings are sorted correctly as expected.
 var myArray = ["Sam","Mark","Tom","David"];
 myArray.sort();
 document.write(myArray);
-```
-Output : 
-```
-David,Mark,Sam,Tom
+
+//Output : 
+//David,Mark,Sam,Tom
 ```
 
 Now, let's look at an example of sorting numbers. 
@@ -469,10 +590,9 @@ Now, let's look at an example of sorting numbers.
 var myArray = [20, 1 , 10 , 2, 3];
 myArray.sort();
 document.write(myArray);
-```
-Output : 
-```
-1,10,2,20,3
+
+//Output : 
+//1,10,2,20,3
 ```
 
 Notice that the numbers are not sorted as expected. We can fix this by providing a "compare function" as a parameter to the sort function. The compare function should return a negative, zero, or positive value.
@@ -482,10 +602,9 @@ Example :
 var myArray = [20, 1, 10, 2, 3];
 myArray.sort(function (a, b) { return a - b });
 document.write(myArray);
-```
-Output : 
-```
-1,2,3,10,20
+
+//Output : 
+//1,2,3,10,20
 ```
 
 Let's now discuss how the compare function work. The function has 2 parameters (a,b). This function subtracts a from b and returns the result. If the return value is
@@ -505,10 +624,9 @@ Example :
 var myArray = [20, 1, 10, 2, 3];
 myArray.sort(function (a, b) { return b - a });
 document.write(myArray);
-```
-Output : 
-```
-20,10,3,2,1
+
+//Output : 
+//20,10,3,2,1
 ```
 
 **2. Sort the numbers first in ascending order and then use the reverse function to reverse the order of the elements in the array.**
@@ -519,24 +637,25 @@ Example :
 var myArray = [20, 1, 10, 2, 3];
 myArray.sort(function (a, b) { return a - b }).reverse();
 document.write(myArray);
-```
-Output : 
-```
-20,10,3,2,1
+
+//Output : 
+//20,10,3,2,1
 ```
 
-**JavaScript reverse method :** reverses the order of the elements in an array.
+### JavaScript reverse method : 
+reverses the order of the elements in an array.
 
-**JavaScript splice method :** This method is used to add or remove elements from an array. 
+### JavaScript splice method :
+This method is used to add or remove elements from an array. 
 
 Syntax : 
 ```js
 array.splice(index,deleteCount,item1,.....,itemX)
 ```
 
-**index** - Required. Specifies at what position to add or remove items
-deleteCount - Required. The number of items to be removed. If set to 0, no items will be removed.
-item1,.....,itemX - Optional. The new item(s) to be added to the array
+- **index** - Required. Specifies at what position to add or remove items
+- **deleteCount** - Required. The number of items to be removed. If set to 0, no items will be removed.
+- **item1,.....,itemX** - Optional. The new item(s) to be added to the array
 
 Example : 
 
@@ -544,10 +663,9 @@ Example :
 var myArray = [1,2,5];
 myArray.splice(2, 0, 3, 4);
 document.write(myArray);
-```
-Output : 
-```
-1,2,3,4,5
+
+//Output : 
+//1,2,3,4,5
 ```
 
 Example : 
@@ -556,11 +674,9 @@ Example :
 var myArray = [1,2,55,67,3];
 myArray.splice(2, 2);
 document.write(myArray);
-```
 
-Output : 
-```
-1,2,3
+//Output : 
+//1,2,3
 ```
 
 ## Array Filters
@@ -568,24 +684,23 @@ The filter() method creates a new array and populates that array with all the el
 
 Syntax : ```array.filter(callbackFunction[, thisArg])```
 
-### Parameters
-#### callbackFunction
+### callbackFunction
 Required. Function that gets called for each element of the array. If the function returns true, the element is kept otherwise filtered.
 
-#### thisArg
+### thisArg
 Optional. An object to which the this keyword can refer in the callbackfn function.
 
 The filter method calls the callbackfn function one time for each element in the array. If the callback function returns false for all elements of the array, the length of the new array that will be returned is 0.
 
 ### Callback Function Syntax
-```
+```js
 function callbackFunction(value, index, array)
 ```
 
 #### Callback Function Parameters
-**Value** The value of the element in the array
-**Index** The index position of the element in the array
-**Array** The source array object that contains the element
+- **Value** The value of the element in the array
+- **Index** The index position of the element in the array
+- **Array** The source array object that contains the element
 
 
 **Example 1 :** Retrieve only even numbers from myArray
@@ -607,11 +722,9 @@ var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 var result = myArray.filter(IsEven);
 
 document.write(result);
-```
 
-Output : 
-```
-2,4,6,8,10
+//Output : 
+//2,4,6,8,10
 ```
 
 **Example 2 :** In Example 1 we defined a callback function first and then passed it as an argument to the filter() method. In the example below, we created the callback function as an anonymous function directly in the filter method where it is required.
@@ -624,11 +737,10 @@ var myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 var result = myArray.filter(function (v, i, a) { return v % 2 == 0 });
 
 document.write(result);
-```
 
-Output : 
-```
-2,4,6,8,10
+
+//Output : 
+//2,4,6,8,10
 ```
 
 **Example 3 :** Remove duplicates from javascript array
@@ -636,10 +748,9 @@ Output :
 var myArray = ["Sam", "Mark", "Tim", "Sam"];
 var uniqueItems = myArray.filter(function (v, i, a) { return a.indexOf(v) == i });
 document.write(uniqueItems);
-```
-Output :
-```
-Sam,Mark,Tim
+
+//Output :
+//Sam,Mark,Tim
 ```
 
 ## Two dimensional array in javascript
@@ -834,7 +945,7 @@ function functionName(parameter1, parameter2,..parameter_n)
 }
 ```
 
-**Points to remember**
+## Points to remember
 1. Use the function keyword to define a function, followed by the name of the function. The name of the function should be followed by parentheses ().
 2. Function parameters are optional. The parameter names must be with in parentheses separated by commas.
 
@@ -846,16 +957,16 @@ function addNumbers(firstNumber, secondNumber)
     return result;
 }
 ```
-**Calling the JavaScript function :** Call the JavaScript function by specifying the name of the function and values for the parameters if any.
+## Calling the JavaScript function :
+ Call the JavaScript function by specifying the name of the function and values for the parameters if any.
 ```js
 var sum = addNumbers(10, 20);
 alert(sum);
-```
-```
-Output : 30
+
+//Output : 30
 ```
 
-> What happens when you do not specify values for the function parameters when calling the function
+### What happens when you do not specify values for the function parameters when calling the function ?
 The parameters that are missing values are set to undefined
 
 **Example :** In the example below, we are passing 10 for the firstNumber parameter but the secondNumber parameter is missing a value, so this parameter will be set to undefined. When a plus (+) operator is applied between 10 and undefined we get not a number (NaN) and that will be alerted.
@@ -868,15 +979,13 @@ function addNumbers(firstNumber, secondNumber)
 
 var sum = addNumbers(10);
 alert(sum);
+
+
+//Output : 
+//NaN
 ```
 
-Output : 
-
-```
-NaN
-```
-
-What happens when you specify too many parameter values when calling the function. 
+### What happens when you specify too many parameter values when calling the function? 
 The extra parameter values are ignored.
 
 **Example :** In the example below, 30 & 40 are ignored.
@@ -892,7 +1001,7 @@ var sum = addNumbers(10, 20, 30, 40);
 alert(sum);
 ```
 
-> Should a javascript function always return a value
+### Should a javascript function always return a value ?
 No, they don't have to. It totally depends on what you want the function to do. If an explicit return is omitted, undefined is returned automatically. Let's understand this with an example.
 
 The following function returns the sum of two numbers. We are storing the return value of the function in sum variable and writing it's value to the document.
@@ -919,7 +1028,7 @@ var sum = addNumbers(10, 20);
 alert(sum);
 ```
 
-## Different ways of defining functions in JavaScript
+### Different ways of defining functions in JavaScript
 
 In JavaScript, there are several different ways of defining functions.
 
@@ -935,11 +1044,9 @@ function addNumbers(firstNumber, secondNumber)
 
 var sum = addNumbers(10, 20);
 document.write(sum);
-```
 
-Output : 
-```
-30
+//Output : 
+//30
 ```
 
 Example 2 : A function call is present before the respective function declaration
@@ -957,7 +1064,7 @@ function addNumbers(firstNumber, secondNumber)
 }
 ```
 
-### Function Hoisting :
+## Function Hoisting
 By default, JavaScript moves all the function declarations to the top of the current scope. This is called function hoisting. This is the reason JavaScript functions can be called before they are declared.
 
 ### Defining a JavaScript function using a function expression : 
@@ -1006,7 +1113,7 @@ var result = factorial(5);
 document.write(result);
 ```
 
-The name of the function (i.e computeFactorial) is available only with in the same function. This syntax is useful for creating recursive functions. If you use computeFactorial() method outside of the function it raises _computeFactorial is undefined error_
+The name of the function (i.e computeFactorial) is available only with in the same function. This syntax is useful for creating recursive functions. If you use **computeFactorial()** method outside of the function it raises _computeFactorial is undefined error_
 ```js
 var factorial = function computeFactorial(number) 
 {
@@ -1020,11 +1127,9 @@ var factorial = function computeFactorial(number)
 
 var result = computeFactorial(5);
 document.write(result);
-```
 
-Output : 
-```
-Error - 'computeFactorial' is undefined.
+//Output : 
+//Error - 'computeFactorial' is undefined.
 ```
 
 **Self invoking function expression example :** 
@@ -1040,11 +1145,10 @@ var result = (function computeFactorial(number)
 })(5);
 
 document.write(result);
-```
 
-Output : 
-```
-120
+
+//Output : 
+//120
 ```
 
 These are called with different names
@@ -1079,11 +1183,9 @@ function factorial(n)
 }
 
 document.write(factorial(5));
-```
 
-Output : 
-```
-120
+//Output : 
+//120
 ```
 
 **Example :** Computing the factorial of a number using a recursive function
@@ -1156,11 +1258,10 @@ function numbers()
 }
 
 numbers(50, 20, 40);
-```
 
-Output : 
-```
-20, 40, 50
+
+//Output : 
+//20, 40, 50
 ```
 
 ## Converting JavaScript arguments object to an array using array literals
@@ -1253,12 +1354,10 @@ greeting += "!!!";
 helloWorld();
 
 document.write(greeting);
-```
 
-Output : 
-```
-This is from local variable
-This is from global Variable!!! 
+//Output : 
+//This is from local variable
+//This is from global Variable!!! 
 ```
 Sometimes, variable hoisting and local & global variable with the same name can cause unexpected behavior.
 ```js
@@ -1270,10 +1369,9 @@ function helloWorld()
     document.write(greeting);
     var greeting = "Hello from local variable"
 }
-```
-Output :
-```
-undefined
+
+//Output :
+//undefined
 ```
 At runtime due to variable hoisting, the above program would look more like as shown below.
 ```js
@@ -1302,6 +1400,7 @@ Output :
 ```
 100
 ```
+---
 # Closures in JavaScript
 ## What is a closure
 A closure is an inner function that has access to the outer function’s variables in addition to it's own variables and global variables. The inner function has access not only to the outer function’s variables, but also to the outer function’s parameters. You create a closure by adding a function inside another function.
@@ -1390,7 +1489,7 @@ Using a local variable with in a function and incrementing it by calling the fun
 ```
 
 
-### Using a JavaScript closure : 
+## Using a JavaScript closure : 
 A closure is an inner function that has access to the outer function’s variables in addition to it's own variables and global variables. In simple terms a closure is function inside a function. These functions, that is the inner and outer functions could be named functions or anonymous functions. In the example below we have an anonymous function inside another anonymous function. The variable incrementClickCount is assigned the return value of the self invoking anonymous function.
 ```js
 <script type="text/javascript">
@@ -1420,6 +1519,7 @@ In the example above, in the alert function we are calling the variable incremen
 </script>
 <input type="button" value="Click Me" onclick="alert(incrementClickCount());" />
 ```
+---
 # Error handling in JavaScript
 Use try/catch/finally to handle runtime errors in JavaScript. These runtime errors are called exceptions. An exception can occur for a variety of reasons. For example, referencing a variable or a method that is not defined can cause an exception. 
 
@@ -1559,11 +1659,10 @@ catch (e)
 {
     document.write(e.message);    
 }
-```
 
-Output : 
-```
-'NonExistingFunction' is undefined 
+
+//Output : 
+//'NonExistingFunction' is undefined 
 ```
 
 onerror event handler method can also be used with HTML elements : In the example below, since the image is not existing and cannot be found we get "There is a problem loading the image" error.
@@ -1576,7 +1675,7 @@ onerror event handler method can also be used with HTML elements : In the exampl
 </script>
 <img src="NonExistingImage.jpg" onerror="imageErrorHandler()" />
 ```
-
+---
 # Working with dates in javascript
 To create date object in JavaScript use `Date()` constructor
 
@@ -1719,7 +1818,7 @@ function formatDate(date)
 
 document.write(formatDate(new Date()));
 ```
-
+---
 # JavaScript timing events
 In JavaScript a piece of code can be executed at specified time interval. For example, you can call a specific JavaScript function every 1 second. This concept in JavaScript is called timing events. 
 
@@ -1946,10 +2045,10 @@ How to show confirmation dialog in JavaScript
 
 ```
 
-# Event handlers in JS 
+## Event handlers in JS 
 In JavaScript there are several ways to associate an event handler to the event. In Part 36, we discussed, associating event handler methods to events using the attributes of HTML tags. In this video we will discuss using DOM object property to assign event handlers to events.
 
-## First let us understand, what is DOM
+### First let us understand, what is DOM
 DOM stands for Document Object Model. When a browser loads a web page, the browser creates a Document Object Model of that page. The HTML DOM is created as a tree of Objects. 
 
 **Example :**
@@ -2054,7 +2153,7 @@ Using this approach you can only assign one event handler method to a given even
 </script>
 ```
 
-## addeventlistener and removeeventlistener in JavaScript
+### `addeventlistener` and `removeeventlistener` in JavaScript
 
 assigning event handlers in JavaScript using the following special methods
 - `addEventListener`
@@ -2203,7 +2302,7 @@ element.detachEvent( "on"+event, handler)
 </script>
 ```
 
-# JavaScript event object
+## JavaScript event object
 Whenever an event (like click, mouseover, mouseout etc) occurs, the relevant data about that event is placed into the event object. For example, the event object contains event data like, the X and Y coordinates of the mouse pointer when the event occurred, the HTML element that fired the event, which mouse button is clicked etc.
 
 Obtaining the event object is straightforward. The event object is always passed to the event handler method. Let us understand this with an example. When we click the button, we want to capture the following event data
@@ -2298,8 +2397,8 @@ The following example retrieves mousemove event data. Notice that as you move th
 ```
 
 
-# Event bubbling in JavaScript
-## What is event bubbling 
+## Event bubbling in JavaScript
+### What is event bubbling 
 Let us understand this with an example. HTML elements can be nested inside each other. For example a button element can be nested inside a span element and the span element inturn can be nested inside a div element.
 
 Notice that we have onclick attribute specified for all the 3 elements.
@@ -2760,7 +2859,7 @@ The following JavaScript code detects which mouse button is clicked. It works in
 <button onmouseup="whichMouseButtonClicked(event)">Click Me</button>
 ```
 
-# JavaScript mouse events
+## JavaScript mouse events
 In this tutorial we will discuss the commonly used JavaScript mouse events. Most browsers support these events.
 
 - `mouseover` - Occurs when the mouse pointer is moved over an element
@@ -2796,7 +2895,7 @@ Here is an example which logs the mouse events to textarea element as they occur
 ```
 * * *
 
-# JavaScript popup window
+## JavaScript popup window
 To open a popup window, use window.open() method. All the parameters are optional.
 ```js
 window.open(URL, name, features, replace)
@@ -2865,6 +2964,7 @@ To close pouup use window.close() method.
     }
 </script>
 ```
+---
 # Using regular expressions in JavaScript
 
 > A regular expression is a sequence of characters that forms a search pattern. 
@@ -3140,12 +3240,12 @@ Email : <input type="text" id="txtEmail" onkeyup="validateEmail()" />
 </script>
 ```
 
-# JavaScript and object oriented programming
+# JavaScript and object oriented programming (OOP)
 JavaScript is object oriented programming language. The following are the 4 pillars of any object oriented programming language.  We will discuss examples of these in a latersession.
-1. Inheritance
-2. Encapsulation
-3. Abstraction
-4. Polymorphism
+1. **Inheritance**
+2. **Encapsulation**
+3. **Abstraction**
+4. **Polymorphism**
 
 In this tutorial let's focus on creating objects in JavaScript. Objects in JavaScript can be broadly classified into 2 categories.
 1. Standard built-in objects
@@ -3166,41 +3266,41 @@ In JavaScript there are two ways to create a custom object.
 
 ## Creating an object in JavaScript using constructor function 
 
-[script type="text/javascript"]
-    function Employee(firstName, lastName) 
+```js
+function Employee(firstName, lastName) 
+{
+    this.firstName = firstName;
+    this.lastName = lastName;
+
+    this.getFullName = function () 
     {
-        this.firstName = firstName;
-        this.lastName = lastName;
-
-        this.getFullName = function () 
-        {
-            return this.firstName + " " + this.lastName;
-        }
+        return this.firstName + " " + this.lastName;
     }
+}
 
-    var employee = new Employee("Pragim", "Tech");
-    document.write("FirstName = " + employee.firstName + "[br/]");
-    document.write("LastName = " + employee.lastName + "[br/]");
-    document.write("FullName = " + employee.getFullName() + "[br/]");
-[/script]
+var employee = new Employee("Pragim", "Tech");
+document.write("FirstName = " + employee.firstName + "[br/]");
+document.write("LastName = " + employee.lastName + "[br/]");
+document.write("FullName = " + employee.getFullName() + "[br/]");
+```
 
 ## Creating an object in JavaScript using literal notation
-[script type="text/javascript"]
-    var employee = 
+```js
+var employee = 
+{
+    firstName : "Pragim",
+    lastName : "Tech",
+
+    getFullName : function () 
     {
-        firstName : "Pragim",
-        lastName : "Tech",
-
-        getFullName : function () 
-        {
-            return this.firstName + " " + this.lastName;
-        }
+        return this.firstName + " " + this.lastName;
     }
+}
 
-    document.write("FirstName = " + employee.firstName + "[br/]");
-    document.write("LastName = " + employee.lastName + "[br/]");
-    document.write("FullName = " + employee.getFullName() + "[br/]");
-[/script]
+document.write("FirstName = " + employee.firstName + "[br/]");
+document.write("LastName = " + employee.lastName + "[br/]");
+document.write("FullName = " + employee.getFullName() + "[br/]");
+```
 
 Both the examples above produce the same output.
 
@@ -3216,7 +3316,6 @@ employee.firstName
 ## Object literal vs object constructor
 ### Creating an object using object literal notation
 ```js
-<script type="text/javascript">
     var employee = 
     {
         name : "John"
@@ -3231,11 +3330,8 @@ employee.firstName
     // Retrieve the name property from the original employee object
     // Notice that name is changed to Mary
     document.write(employee.name);
-</script>
-```
-Output : 
-```
-Mary
+
+//Output : Mary
 ```
 Objects created using object literals are singletons. This means when a change is made to the object, it affects that object across the entire script.
 
@@ -3262,10 +3358,8 @@ Objects created using object literals are singletons. This means when a change i
     // Notice that name is not changed to Mary, it is still John
     document.write(employee.name);
 </script>
-```
-Output : 
-```
-John
+
+Output : John
 ```
 
 Object defined with a function constructor lets you have multiple instances of that object. This means change made to one instance, will not affect other instances.
@@ -3378,11 +3472,11 @@ KillerTech.TeamA.customer = function (firstName, lastName)
 ```
 KillerTech will be added to the global namespace. window is the alias for global namespace in JavaScript. You can now access `customer()` function as shown below.
 ```js
-KillerTech.TeamA.customer("Tom", "Grover")
+KillerTech.TeamA.customer("Tom", "Grover");
 ```
 OR
 ```js
-window.KillerTech.TeamA.customer("Tom", "Grover")
+window.KillerTech.TeamA.customer("Tom", "Grover");
 ```
 Modify the script in TeamB.js file as shown below. In this example we are adding customer() function to KillerTech.TeamB namespace. 
 ```js
@@ -3433,7 +3527,9 @@ On any given HTML page you should be able to access both the versions of custome
 
 # Private members in JavaScript
 In any object oriented programming language, classes can have private and public members. For example a class in C# can have private and public fields and functions. An example is shown below.
-```js
+**C# Code**
+```cs
+//C# code 
 public class Employee
 {
     // Private Field
@@ -3506,7 +3602,7 @@ employee.privateGetFullName()                               // Calling private m
 employee.privateFullName                                    // Calling private field - undefined error
 ```
 
-Can we modify a private field outside of the constructor function?
+### Can we modify a private field outside of the constructor function?
 Straight answer, no you can't.
 
 In the example below, when we call the private field (employee.privateFullName) it results in undefined error. On the next line we are adding a new public field with same name as the private field to the employee object. Is this going to change the private field (privateFullName). The answer is NO. You cannot access or modify private fields outside of the object. In this example, you are just adding new public field (employee.privateFullName) to the employee object. 
@@ -3521,13 +3617,13 @@ document.write(employee.privateFullName);
 ```
 
 
-## Private fields - 
+## Private fields
 Declared using the var keyword inside the object, and can only be accessed by private functions and privileged methods.
 
-## Public fields - 
+## Public fields
 Declared using this keyword and are available outside the object.
 
-## Private functions -
+## Private functions
 Declared inside the object using one of the 2 ways shown below. Can be called only by privileged methods.
 ```js
 var privateGetFullName = function () 
@@ -3545,7 +3641,7 @@ function privateGetFullName()
 }
 ```
 
-## Privileged methods - 
+## Privileged methods
 Declared using this keyoword and are available both within and outside the object.
 ```js
 // Privileged Function
@@ -3555,7 +3651,7 @@ this.privilegedGetFullName = function ()
 }
 ```
 
-## Public methods - 
+## Public methods
 Defined by using the object's prototype property and are available both within and outside the object.
 ```js
 // Public Function
@@ -4016,6 +4112,7 @@ Let us first look at a simple C# example.
 
 2. Add a webform to the project. Name it WebForm1.aspx. Copy and past the following code in the code-behind file.
 ```cs
+//C# code
 using System;
 
 namespace Demo
@@ -4846,6 +4943,7 @@ The easiest way to detect if JavaScript is enabled is by using noscript tag. The
     }
 </script>
 ```
+---
 # window location in JavaScript
 The Window.location property returns a Location object that can be used to get information about the current page. Window.location property can also be used to redirect the browser to a new page.
 
