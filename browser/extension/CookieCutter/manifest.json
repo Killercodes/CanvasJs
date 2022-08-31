@@ -1,0 +1,13 @@
+{
+    "name": "Cookie Clearer",
+    "description": "Deletes all the cookies on demand",
+    "manifest_version": 3,
+    "version": "1.0",
+    "permissions": ["cookies"],
+    "host_permissions": ["<all_urls>"],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+
+  
