@@ -1,0 +1,13 @@
+{
+    "manifest_version": 2,
+    "name": "EBlocker",
+    "description":"Hides html elements",
+    "version":"1.4.11.1504",
+    "content_scripts":[
+        {
+            "run_at":"document_idle",
+            "matches":["http://*/","https://*/*"],
+            "js":["ext.js"]
+        }
+    ]
+}
