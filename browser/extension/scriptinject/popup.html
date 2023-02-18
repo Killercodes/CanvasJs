@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>JavaScript Loader</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <h1>JavaScript Loader</h1>
+    <form id="add-rule-form">
+      <label for="add-rule-url">URL pattern:</label>
+      <input type="text" id="add-rule-url" placeholder="e.g. https://example.com/*">
+      <label for="add-rule-file">JavaScript file:</label>
+      <input type="file" id="add-rule-file">
+      <button type="submit" id="save-rule-button" disabled>Save</button>
+    </form>
+    <h2>Rules</h2>
+    <ul id="rules-list"></ul>
+    <script src="popup.js"></script>
+  </body>
+</html>
