@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Twitter Thread Analyzer",
+  "version": "1.0",
+  "description": "Analyze tweets in a thread with contents",
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
