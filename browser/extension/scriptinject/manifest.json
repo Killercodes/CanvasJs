@@ -3,7 +3,7 @@
   "name": "Local JS Extension",
   "version": "1.0",
   "description": "A Chrome extension that loads and executes JavaScript files from disk",
-  "permissions": ["tabs", "activeTab", "<all_urls>"],
+  "permissions": ["tabs", "activeTab", "<all_urls>", "file://*/*"],
   "background": {
     "scripts": ["background.js"]
   },
