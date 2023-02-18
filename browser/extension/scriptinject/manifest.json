@@ -10,5 +10,8 @@
   "browser_action": {
     "default_title": "Local JS Extension",
     "default_popup": "popup.html"
-  }
+  },
+  "web_accessible_resources": ["js/*"]
+
+
 }
