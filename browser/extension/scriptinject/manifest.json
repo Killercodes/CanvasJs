@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Local JS Extension",
+  "version": "1.0",
+  "description": "A Chrome extension that loads and executes JavaScript files from disk",
+  "permissions": ["tabs", "activeTab", "<all_urls>"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_title": "Local JS Extension",
+    "default_popup": "popup.html"
+  }
+}
