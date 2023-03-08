@@ -1,11 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "No More ADs",
-  "version": "3.0",
+  "name": "No More ADS",
+  "version": "3.4",
   "permissions": [
-    "scripting",
-    "webRequest",
-    "<all_urls>"
+	"declarativeNetRequest"
   ],
   "host_permissions": [
     "<all_urls>"
